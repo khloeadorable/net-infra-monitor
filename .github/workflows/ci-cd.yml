@@ -50,6 +50,7 @@ jobs:
         run: docker build -t net-infra-monitor:${{ github.sha }} .
 
   terraform-plan:
+    if: false
     runs-on: ubuntu-latest
     needs: lint
     # Runs on PRs (to comment a plan for review) and on pushes to main
@@ -113,6 +114,7 @@ jobs:
           retention-days: 1
 
   terraform-apply:
+    if: false
     runs-on: ubuntu-latest
     needs: [terraform-plan, test, build]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -149,6 +151,7 @@ jobs:
         working-directory: ${{ env.TF_DIR }}
 
   deploy-app:
+    if: false
     runs-on: ubuntu-latest
     needs: terraform-apply
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
