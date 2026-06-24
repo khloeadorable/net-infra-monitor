@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Gateway-01",
+    "type": "http",
+    "target": "http://1.2.3.4/"
+  },
+  {
+    "name": "Database-Primary",
+    "type": "tcp",
+    "target": "1.2.3.4:5432"
+  }
+]

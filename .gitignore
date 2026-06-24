@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Logs — never commit runtime logs
+*.log
+network_status.log
+
+# Terraform — applies wherever .terraform/state lives now (modules,
+# environments/, bootstrap/), not just one root directory
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.backup
+**/.terraform.lock.hcl
+**/terraform.tfvars
+**/tfplan
+**/plan_output.txt
+
+# Secrets / local config
+.env
+config/nodes.json
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

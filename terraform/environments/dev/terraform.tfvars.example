@@ -1,0 +1,5 @@
+aws_region       = "us-east-1"
+project_name     = "net-infra-monitor"
+instance_type    = "t2.micro"
+allowed_ssh_cidr = "YOUR_IP/32"
+alert_email      = "you@example.com"
